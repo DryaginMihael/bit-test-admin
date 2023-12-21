@@ -4,7 +4,7 @@ import { faUser, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
 const NavBar = () => {
   return (
-    <nav className="bg-blue-gray mx-3 sm:mx-6 my-6 p-4 flex justify-between items-center rounded-lg h-[86px]">
+    <nav className="NavBar bg-blue-gray mx-3 sm:mx-6 my-6 p-4 flex justify-between items-center rounded-lg h-[86px]">
       <div className="text-white font-bold text-lg">
         BitTest
       </div>

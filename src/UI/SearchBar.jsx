@@ -11,7 +11,7 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div className="mt-6">
+    <div className="SearchBar mt-6">
       <form onSubmit={handleSubmit} className="flex w-full items-center border-2 border-gray-800 rounded-md px-5 py-2">
         <FontAwesomeIcon icon={faSearch} className="text-gray-400" />
         <input

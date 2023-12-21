@@ -1,6 +1,8 @@
 import React from 'react';
 import plot from "../assets/plot.png";
 import history from "../assets/history.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 const Drawer = ({ isOpen, onClose, user }) => {
   if (!isOpen) return null;
@@ -12,7 +14,7 @@ const Drawer = ({ isOpen, onClose, user }) => {
           className="absolute inset-0 bg-black bg-opacity-25 transition-opacity"
           onClick={onClose}
         ></div>
-        <section className="absolute inset-y-0 right-0 pl-10 max-w-full flex" aria-labelledby="slide-over-heading">
+        <section className="absolute inset-y-0 right-0 sm:pl-10 max-w-full flex" aria-labelledby="slide-over-heading">
           <div className="relative w-screen max-w-md">
             <div className="h-full flex flex-col py-6 bg-blue-gray shadow-xl overflow-y-scroll">
               <div className="px-4 sm:px-6">
@@ -26,7 +28,7 @@ const Drawer = ({ isOpen, onClose, user }) => {
                       onClick={onClose}
                     >
                       <span className="sr-only">Close panel</span>
-                      X
+                      <FontAwesomeIcon icon={faXmark} size="xl"/>
                     </button>
                   </div>
                 </div>
