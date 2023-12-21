@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/bit-test-admin/static/css/main.fc9ccb0e.css",
+    "main.js": "/bit-test-admin/static/js/main.a4a34ede.js",
+    "static/js/787.c0012aa0.chunk.js": "/bit-test-admin/static/js/787.c0012aa0.chunk.js",
+    "index.html": "/bit-test-admin/index.html",
+    "main.fc9ccb0e.css.map": "/bit-test-admin/static/css/main.fc9ccb0e.css.map",
+    "main.a4a34ede.js.map": "/bit-test-admin/static/js/main.a4a34ede.js.map",
+    "787.c0012aa0.chunk.js.map": "/bit-test-admin/static/js/787.c0012aa0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc9ccb0e.css",
+    "static/js/main.a4a34ede.js"
+  ]
+}
