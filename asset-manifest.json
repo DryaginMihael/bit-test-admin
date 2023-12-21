@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/bit-test-admin/static/css/main.770c973f.css",
-    "main.js": "/bit-test-admin/static/js/main.a7f3ad32.js",
+    "main.css": "/bit-test-admin/static/css/main.4b7aeaba.css",
+    "main.js": "/bit-test-admin/static/js/main.7f3005df.js",
     "static/js/787.c0012aa0.chunk.js": "/bit-test-admin/static/js/787.c0012aa0.chunk.js",
     "static/media/plot.png": "/bit-test-admin/static/media/plot.5718f3ac88695348b732.png",
     "static/media/history.png": "/bit-test-admin/static/media/history.c8cbe4f8d2c91b72cacc.png",
     "index.html": "/bit-test-admin/index.html",
-    "main.770c973f.css.map": "/bit-test-admin/static/css/main.770c973f.css.map",
-    "main.a7f3ad32.js.map": "/bit-test-admin/static/js/main.a7f3ad32.js.map",
+    "main.4b7aeaba.css.map": "/bit-test-admin/static/css/main.4b7aeaba.css.map",
+    "main.7f3005df.js.map": "/bit-test-admin/static/js/main.7f3005df.js.map",
     "787.c0012aa0.chunk.js.map": "/bit-test-admin/static/js/787.c0012aa0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.770c973f.css",
-    "static/js/main.a7f3ad32.js"
+    "static/css/main.4b7aeaba.css",
+    "static/js/main.7f3005df.js"
   ]
 }
