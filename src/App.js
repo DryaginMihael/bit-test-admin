@@ -3,7 +3,7 @@ import Admin from './pages/Admin';
 
 function App() {
   return (
-    <div className="App bg-dark p-6 h-screen text-white overflow-y-scroll">
+    <div className="App bg-dark h-screen text-white overflow-y-scroll">
       <Admin />
     </div>
   );

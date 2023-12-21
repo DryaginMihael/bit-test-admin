@@ -12,9 +12,7 @@ const Pagination = ({ total, itemsPerPage, currentPage, onPageChange }) => {
   return (
     <div className="flex items-center justify-center my-5 space-x-2">
       <button
-        className={`px-3 py-1 rounded-md rounded-l-lg focus:outline-none focus:shadow-outline-blue text-white ${
-          page === 1 ? 'bg-blue-500' : ''
-        }`}
+        className={`px-3 py-1 rounded-md rounded-l-lg focus:outline-none focus:shadow-outline-blue text-white`}
         onClick={() => handlePageChange(page - 1)}
         disabled={page === 1}
       >
