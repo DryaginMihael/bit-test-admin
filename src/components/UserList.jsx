@@ -37,11 +37,12 @@ const UserList = ({ users, onSearch, sortType, onSort, openDrawer }) => {
                                                 >
                                                     Email
                                                 </th>
-                                                <th scope="col">Имя</th>
-                                                <th scope="col">Роль</th>
-                                                <th scope="col">Подписка</th>
+                                                <th scope="col" className="px-6 py-3">Имя</th>
+                                                <th scope="col" className="px-6 py-3">Роль</th>
+                                                <th scope="col" className="px-6 py-3">Подписка</th>
                                                 <th
                                                     scope="col"
+                                                    className="px-6 py-3"
                                                     onClick={() =>
                                                         onSort(
                                                             sortType === "desc"
@@ -65,7 +66,7 @@ const UserList = ({ users, onSearch, sortType, onSort, openDrawer }) => {
                                                         />
                                                     )}
                                                 </th>
-                                                <th scope="col">Действия</th>
+                                                <th scope="col" className="px-6 py-3">Действия</th>
                                             </tr>
                                         </thead>
                                         <tbody className="divide-y divide-slate-800 whitespace-nowrap text-sm text-gray-100">
