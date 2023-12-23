@@ -24,7 +24,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "react-scripts build & gh-pages -d build"
+    "deploy": "react-scripts build & gh-pages -d build",
+    "format": "prettier --write ."
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +46,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.0"
+    "gh-pages": "^6.1.0",
+    "prettier": "3.1.1"
   }
 }

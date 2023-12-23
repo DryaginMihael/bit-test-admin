@@ -12,7 +12,10 @@ const SearchBar = ({ onSearch }) => {
 
   return (
     <div className="SearchBar mt-6">
-      <form onSubmit={handleSubmit} className="flex w-full items-center border-2 border-gray-800 rounded-md px-5 py-2">
+      <form
+        onSubmit={handleSubmit}
+        className="flex w-full items-center border-2 border-gray-800 rounded-md px-5 py-2"
+      >
         <FontAwesomeIcon icon={faSearch} className="text-gray-400" />
         <input
           type="text"
@@ -25,7 +28,9 @@ const SearchBar = ({ onSearch }) => {
           }}
           className="flex-grow pl-5 bg-transparent text-white outline-none w-full"
         />
-        <button type="submit" className="hidden">Search</button>
+        <button type="submit" className="hidden">
+          Search
+        </button>
       </form>
     </div>
   );

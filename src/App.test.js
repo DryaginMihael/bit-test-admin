@@ -9,12 +9,12 @@ describe('APP TESTS', () => {
   });
 
   test('INPUT EVENT', () => {
-    render(<App/>);
+    render(<App />);
     const searchInput = screen.getByPlaceholderText(/поиск/i);
     const searchStr = 'Эдуард';
     fireEvent.input(searchInput, {
-        target: {value: searchStr}
-    })
+      target: { value: searchStr },
+    });
     expect(searchInput.value).toBe(searchStr);
-})
-})
+  });
+});
