@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, act } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Admin from "./Admin";
 
@@ -19,7 +19,7 @@ describe("ADMIN TESTS", () => {
         await new Promise((resolve) => setTimeout(resolve, 200)); // wait input delay
 
         expect(screen.queryByRole('table')).toBeNull(); // table doesn't exist
-        expect(screen.getByText('Ничего не найдено')).toBeInTheDocument(); // Not found exists
+        expect(screen.getByText('Ничего не найдено')).toBeInTheDocument(); // Not found exist
         
     })
 })
