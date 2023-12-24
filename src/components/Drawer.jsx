@@ -28,6 +28,7 @@ function Drawer({ isOpen, onClose, user }) {
                   <div className="ml-3 h-7 flex items-center">
                     <button
                       className="rounded-md text-white hover:text-gray-100 focus:outline-none"
+                      type="button"
                       onClick={onClose}
                     >
                       <span className="sr-only">Close panel</span>
