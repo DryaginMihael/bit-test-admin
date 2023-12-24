@@ -1,10 +1,9 @@
-import React from 'react';
-import plot from '../assets/plot.png';
-import history from '../assets/history.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import plot from '../assets/plot.png';
+import history from '../assets/history.png';
 
-const Drawer = ({ isOpen, onClose, user }) => {
+function Drawer({ isOpen, onClose, user }) {
   if (!isOpen) return null;
 
   return (
@@ -12,8 +11,9 @@ const Drawer = ({ isOpen, onClose, user }) => {
       <div className="absolute inset-0 overflow-hidden">
         <div
           className="absolute inset-0 bg-black bg-opacity-25 transition-opacity"
+          onKeyDown={onClose}
           onClick={onClose}
-        ></div>
+        />
         <section
           className="absolute inset-y-0 right-0 sm:pl-10 max-w-full flex"
           aria-labelledby="slide-over-heading"
@@ -49,6 +49,6 @@ const Drawer = ({ isOpen, onClose, user }) => {
       </div>
     </div>
   );
-};
+}
 
 export default Drawer;

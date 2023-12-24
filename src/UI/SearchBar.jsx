@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-const SearchBar = ({ onSearch }) => {
+function SearchBar({ onSearch }) {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSubmit = (event) => {
@@ -34,6 +34,6 @@ const SearchBar = ({ onSearch }) => {
       </form>
     </div>
   );
-};
+}
 
 export default SearchBar;

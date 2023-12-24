@@ -20,3 +20,8 @@
 - содержимое drawer (график и таблица)
 - код неотрефакторен (например таблицу надо вынесть в UI)
 - не используется state manager
+
+Настроен eslint и prettier по этой [статье](https://dev.to/eprikhodko/eslint-prettier-vs-code-create-react-app-airbnb-52bc)
+Настройка eslint для React взята из [Airbnb JavaScript Style Guide](https://airbnb.io/javascript/react/)
+
+Настроены GitHub actions для CI/CD

@@ -1,4 +1,3 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faPencilAlt,
@@ -7,7 +6,7 @@ import {
   faArrowUp,
 } from '@fortawesome/free-solid-svg-icons';
 
-const UserList = ({ users, sortType, onSort, openDrawer }) => {
+function UserList({ users, sortType, onSort, openDrawer }) {
   return (
     <div className="UserList mt-8 flex flex-col">
       <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -68,7 +67,7 @@ const UserList = ({ users, sortType, onSort, openDrawer }) => {
                       <td>{user.role}</td>
                       <td>{user.subscription}</td>
                       <td>{user.token}</td>
-                      <td>
+                      <td aria-label="Actions">
                         <FontAwesomeIcon
                           icon={faPencilAlt}
                           className="px-1 text-sky-500 cursor-pointer"
@@ -90,6 +89,6 @@ const UserList = ({ users, sortType, onSort, openDrawer }) => {
       </div>
     </div>
   );
-};
+}
 
 export default UserList;

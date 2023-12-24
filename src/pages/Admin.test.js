@@ -16,7 +16,7 @@ describe('ADMIN TESTS', () => {
     await userEvent.type(searchBar, '/**80727390)(()~');
     await screen.findByRole('table');
 
-    await new Promise((resolve) => setTimeout(resolve, 200)); // wait input delay
+    await new Promise((resolve) => {setTimeout(resolve, 200)}); // wait input delay
 
     expect(screen.queryByRole('table')).toBeNull(); // table doesn't exist
     expect(screen.getByText('Ничего не найдено')).toBeInTheDocument(); // Not found exist
