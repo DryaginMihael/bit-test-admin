@@ -1,9 +1,9 @@
+import { memo } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import plot from '../assets/plot.png';
-import history from '../assets/history.png';
+import Heading from '../UI/Heading';
 
-function Drawer({ isOpen, onClose, user }) {
+function Drawer({ isOpen, onClose, title, children }) {
   if (!isOpen) return null;
 
   return (
@@ -22,12 +22,10 @@ function Drawer({ isOpen, onClose, user }) {
             <div className="h-full flex flex-col py-6 bg-blue-gray shadow-xl overflow-y-scroll">
               <div className="px-4 sm:px-6">
                 <div className="flex items-start justify-between">
-                  <h2 className="text-lg font-medium" id="slide-over-heading">
-                    {user.email}
-                  </h2>
+                  <Heading text={title} size="lg" />
                   <div className="ml-3 h-7 flex items-center">
                     <button
-                      className="rounded-md text-white hover:text-gray-100 focus:outline-none"
+                      className="rounded-md hover:text-gray-100 focus:outline-none"
                       type="button"
                       onClick={onClose}
                     >
@@ -36,13 +34,7 @@ function Drawer({ isOpen, onClose, user }) {
                     </button>
                   </div>
                 </div>
-              </div>
-              <div className="mt-6 relative flex-1 px-4 sm:px-6 text-left">
-                <h2 className="text-xl font-bold text-left">
-                  Использование токенов
-                </h2>
-                <img src={plot} alt="График использования токенов" />
-                <img src={history} alt="История операций" />
+                {children}
               </div>
             </div>
           </div>
@@ -52,4 +44,4 @@ function Drawer({ isOpen, onClose, user }) {
   );
 }
 
-export default Drawer;
+export default memo(Drawer);

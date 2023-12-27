@@ -19,14 +19,14 @@ function SearchBar({ onSearch }) {
         <FontAwesomeIcon icon={faSearch} className="text-gray-400" />
         <input
           type="text"
-          placeholder="Поиск"
+          placeholder="Search"
           value={searchTerm}
           onChange={(e) => {
             const search = e.target.value;
             setSearchTerm(search);
             onSearch(search);
           }}
-          className="flex-grow pl-5 bg-transparent text-white outline-none w-full"
+          className="flex-grow pl-5 bg-transparent outline-none w-full"
         />
         <button type="submit" className="hidden">
           Search
