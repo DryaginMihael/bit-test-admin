@@ -7,16 +7,15 @@ import USER_TABLE_CONFIG from './const';
 function UserProfile({ user }) {
   const data = useMemo(
     () =>
-      Object.keys(user)
-        .map((key) =>
-          typeof user[key] === 'string'
-            ? {
-                propertyName: key,
-                value: user[key],
-              }
-            : null,
-        )
-        .filter((item) => !!item),
+      Object.keys(user).reduce((acc, key) => {
+        if (typeof user[key] === 'string') {
+          acc.push({
+            propertyName: key,
+            value: user[key],
+          });
+        }
+        return acc;
+      }, []),
     [user],
   );
 
