@@ -1,4 +1,4 @@
-const USER_TABLE_CONFIG = {
+export const USER_TABLE_CONFIG = {
   columns: [
     {
       key: 'propertyName',
@@ -11,4 +11,7 @@ const USER_TABLE_CONFIG = {
   ],
 };
 
-export default USER_TABLE_CONFIG;
+export const CHART_DATA = Array.from({ length: 30 }).map((_, i) => ({
+  name: `${i} янв 2023`,
+  value: Math.round(Math.random() * 200) + 400,
+}));

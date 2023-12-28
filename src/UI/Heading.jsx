@@ -1,6 +1,6 @@
 function Heading({ text, className, size }) {
   return (
-    <h1 className={`${className} text-${size || '3xl'} font-bold text-left`}>
+    <h1 className={`${className} text-${size || 'lg'} font-bold text-left`}>
       {text}
     </h1>
   );

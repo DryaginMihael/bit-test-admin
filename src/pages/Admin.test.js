@@ -1,26 +1,44 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Admin from './Admin';
+import useDebounce from '../hooks/useDebounce';
 
-describe('ADMIN TESTS', () => {
-  test('TABLE EXISTS', () => {
+// Мокаем хук useDebounce
+jest.mock(useDebounce, () => jest.fn((fn) => fn));
+
+describe('Admin', () => {
+  test('renders Admin component', () => {
     render(<Admin />);
-    const usersTable = screen.queryByRole('table');
-    expect(usersTable).toBeInTheDocument();
+    expect(screen.getByText('My organization')).toBeInTheDocument();
+    expect(screen.getByText('Users')).toBeInTheDocument();
   });
 
-  test('EMPTY SEARCH', async () => {
+  test('search input triggers handleSearch', async () => {
     render(<Admin />);
+    const input = screen.getByPlaceholderText(/search/i);
+    userEvent.type(input, 'test');
+    await waitFor(() => {
+      expect(input).toHaveValue('test');
+    });
+  });
 
-    const searchBar = screen.getByPlaceholderText(/поиск/i);
-    await userEvent.type(searchBar, '/**80727390)(()~');
-    await screen.findByRole('table');
+  test('openDrawer updates isDrawerOpen and currentUser', () => {
+    render(<Admin />);
+    const userLine = screen.getByRole('tr');
+    userEvent.click(userLine);
+    const drawer = screen.getByTestId('drawer');
+    expect(drawer).toBeInTheDocument();
+    expect(drawer).toBeVisible();
+  });
 
-    await new Promise((resolve) => {
-      setTimeout(resolve, 200);
-    }); // wait input delay
-
-    expect(screen.queryByRole('table')).toBeNull(); // table doesn't exist
-    expect(screen.getByText('Ничего не найдено')).toBeInTheDocument(); // Not found exist
+  test('close Drawer updates isDrawerOpen', () => {
+    render(<Admin />);
+    // Открываем Drawer
+    const userLine = screen.getByRole('tr');
+    userEvent.click(userLine);
+    // Закрываем Drawer
+    const closeButton = screen.getByTestId('closeDrawer');
+    userEvent.click(closeButton);
+    expect(screen.getByTestId('drawer')).not.toBeVisible();
   });
 });

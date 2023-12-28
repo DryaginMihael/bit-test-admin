@@ -7,7 +7,7 @@ function Drawer({ isOpen, onClose, title, children }) {
   if (!isOpen) return null;
 
   return (
-    <div className="absolute inset-0 overflow-hidden">
+    <div className="absolute inset-0 overflow-hidden" data-testid="drawer">
       <div
         className="absolute inset-0 bg-black bg-opacity-25 transition-opacity"
         onKeyDown={onClose}
@@ -22,6 +22,7 @@ function Drawer({ isOpen, onClose, title, children }) {
             <Heading text={title} size="lg" />
             <div className="ml-3 h-7 flex items-center">
               <button
+                data-testid="closeDrawer"
                 className="rounded-md hover:text-gray-100 focus:outline-none"
                 type="button"
                 onClick={onClose}

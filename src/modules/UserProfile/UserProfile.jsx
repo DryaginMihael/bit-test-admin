@@ -1,8 +1,8 @@
 import { memo, useMemo } from 'react';
-import plot from '../../assets/plot.png';
 import Heading from '../../UI/Heading';
 import Table from '../../UI/Table';
-import USER_TABLE_CONFIG from './const';
+import { USER_TABLE_CONFIG, CHART_DATA } from './const';
+import Chart from '../../UI/Chart';
 
 function UserProfile({ user }) {
   const data = useMemo(
@@ -20,10 +20,10 @@ function UserProfile({ user }) {
   );
 
   return (
-    <div className="mt-6 relative flex-1 px-4 sm:px-6 text-left">
-      <Heading text="Token usage" size="xl" />
-      <img src={plot} alt="Token usage plot" />
-      <Heading text="User data" size="xl" className="mb-2" />
+    <div className="mt-6 px-4 sm:px-6 relative flex-1 text-left">
+      <Heading text="Token usage" size="xl" className="mb-4" />
+      <Chart data={CHART_DATA} />
+      <Heading text="User data" size="xl" className="mb-4" />
       <Table config={USER_TABLE_CONFIG} data={data} />
     </div>
   );
