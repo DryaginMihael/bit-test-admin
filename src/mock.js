@@ -11,7 +11,6 @@ const NAMES = [
   'Ирина',
 ];
 
-// mock data
 const USERS = Array.from(Array(50), (_, i) => ({
   id: +Date.now() + i,
   name: NAMES[Math.floor(Math.random() * 10)],

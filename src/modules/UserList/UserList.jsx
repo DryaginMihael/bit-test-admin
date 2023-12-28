@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, memo } from 'react';
 import Pagination from '../../components/Pagination';
 import { PAGE_SIZE, TOTAL_USERS, USERS_TABLE_CONFIG } from './consts';
 import { useGetAllUsersQuery } from '../../store/services/users';
@@ -61,4 +61,4 @@ function UserList({ openDrawer, searchStr }) {
   );
 }
 
-export default UserList;
+export default memo(UserList);
