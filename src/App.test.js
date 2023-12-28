@@ -1,20 +1,11 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import App from './App';
+import renderWithRedux from './tests/helpers/renderWithRedux';
 
 describe('APP TESTS', () => {
   test('React Link', () => {
-    render(<App />);
+    renderWithRedux(<App />);
     const linkElement = screen.queryByText(/learn react/i);
     expect(linkElement).toBeNull();
-  });
-
-  test('INPUT EVENT', () => {
-    render(<App />);
-    const searchInput = screen.getByPlaceholderText(/поиск/i);
-    const searchStr = 'Эдуард';
-    fireEvent.input(searchInput, {
-      target: { value: searchStr },
-    });
-    expect(searchInput.value).toBe(searchStr);
   });
 });

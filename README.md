@@ -15,10 +15,10 @@ React, Redux + redux-toolkit, TailwindCSS, Jest + react-testing-library, fontawe
 
 ## Реализовано:
 
-- сделана таблица с массивом пользователей с [ресурса](https://jsonplaceholder.typicode.com/)
+- сделана таблица с массивом пользователей с [ресурса](https://jsonplaceholder.typicode.com/) (так как формат данных от API отличаеся от нужного - данные модифицируются на клиенте)
 - поддержана пагинация
 - поддержана сортировка по количеству токенов (в рамках одной страницы)
-- поиск по имени пользователя (с delay)
+- поиск по имени пользователя (с delay, фильтр тоже на клиенте, т.к. API не работает с поиском)
 - по клику на пользователся открывается drawer (внутри график и таблица с данными по пользователю)
 - реализован адаптив
 - настроен eslint и prettier по этой [статье](https://dev.to/eprikhodko/eslint-prettier-vs-code-create-react-app-airbnb-52bc) (настройка eslint для React взята из [Airbnb JavaScript Style Guide](https://airbnb.io/javascript/react/))
